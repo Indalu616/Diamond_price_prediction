@@ -1,11 +1,12 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS  # Import CORS
 import joblib
 import pandas as pd
 import numpy as np
 
 # Initialize the Flask application
 app = Flask(__name__)
-
+CORS(app)
 # --- Load the saved model, scaler, AND columns ---
 model = joblib.load('diamond_price_predictor_model.joblib')
 scaler = joblib.load('scaler.joblib')
