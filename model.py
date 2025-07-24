@@ -10,7 +10,6 @@ origins = [
     "http://localhost:3000", # Your local React app
     "https://exam-app-cnp7.vercel.app" # IMPORTANT: Add your deployed frontend URL here later
 ]
-
 CORS(app, origins=origins)
 # --- Load the saved model, scaler, AND columns ---
 model = joblib.load('diamond_price_predictor_model.joblib')
